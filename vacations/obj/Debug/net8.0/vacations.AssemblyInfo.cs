@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("vacations")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a8a7ad90fa21a87920130cfa8540df6a78a1edda")]
 [assembly: System.Reflection.AssemblyProductAttribute("vacations")]
 [assembly: System.Reflection.AssemblyTitleAttribute("vacations")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

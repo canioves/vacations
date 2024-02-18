@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "F:\\BackupsAndOther\\coding\\c#\\vacations\\vacations\\vacations.csproj": {}
+    "c:\\coding\\vacations\\vacations\\vacations.csproj": {}
   },
   "projects": {
-    "F:\\BackupsAndOther\\coding\\c#\\vacations\\vacations\\vacations.csproj": {
+    "c:\\coding\\vacations\\vacations\\vacations.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\BackupsAndOther\\coding\\c#\\vacations\\vacations\\vacations.csproj",
+        "projectUniqueName": "c:\\coding\\vacations\\vacations\\vacations.csproj",
         "projectName": "vacations",
-        "projectPath": "F:\\BackupsAndOther\\coding\\c#\\vacations\\vacations\\vacations.csproj",
-        "packagesPath": "C:\\Users\\darkg\\.nuget\\packages\\",
-        "outputPath": "F:\\BackupsAndOther\\coding\\c#\\vacations\\vacations\\obj\\",
+        "projectPath": "c:\\coding\\vacations\\vacations\\vacations.csproj",
+        "packagesPath": "C:\\Users\\sillary\\.nuget\\packages\\",
+        "outputPath": "c:\\coding\\vacations\\vacations\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\darkg\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\sillary\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

@@ -1,0 +1,15 @@
+c:\coding\vacations\vacations\bin\Debug\net8.0\vacations.exe
+c:\coding\vacations\vacations\bin\Debug\net8.0\vacations.deps.json
+c:\coding\vacations\vacations\bin\Debug\net8.0\vacations.runtimeconfig.json
+c:\coding\vacations\vacations\bin\Debug\net8.0\vacations.dll
+c:\coding\vacations\vacations\bin\Debug\net8.0\vacations.pdb
+c:\coding\vacations\vacations\obj\Debug\net8.0\vacations.GeneratedMSBuildEditorConfig.editorconfig
+c:\coding\vacations\vacations\obj\Debug\net8.0\vacations.AssemblyInfoInputs.cache
+c:\coding\vacations\vacations\obj\Debug\net8.0\vacations.AssemblyInfo.cs
+c:\coding\vacations\vacations\obj\Debug\net8.0\vacations.csproj.CoreCompileInputs.cache
+c:\coding\vacations\vacations\obj\Debug\net8.0\vacations.sourcelink.json
+c:\coding\vacations\vacations\obj\Debug\net8.0\vacations.dll
+c:\coding\vacations\vacations\obj\Debug\net8.0\refint\vacations.dll
+c:\coding\vacations\vacations\obj\Debug\net8.0\vacations.pdb
+c:\coding\vacations\vacations\obj\Debug\net8.0\vacations.genruntimeconfig.cache
+c:\coding\vacations\vacations\obj\Debug\net8.0\ref\vacations.dll
