@@ -1,4 +1,6 @@
-﻿List<DateTime> allVacations = new List<DateTime>();
+﻿using System.ComponentModel.DataAnnotations;
+
+List<DateTime> allVacations = new List<DateTime>();
 List<string> workers = new List<string>()
 {
         "Иванов Иван Иванович",
@@ -11,6 +13,7 @@ List<string> workers = new List<string>()
 
 foreach (string worker in workers)
 {
+
     List<DateTime> workerVacationDates = new List<DateTime>();
     int currentDays = 0;
     Vacation v = new Vacation(worker);
@@ -18,44 +21,58 @@ foreach (string worker in workers)
 
     while (currentDays < totalDays)
     {
-        int size = totalDays - currentDays > 7 ? v.GetVacationSize() : 7;
-        bool vacationCorrect = false;
-
-        DateTime[] startAndEnd = v.GetVacationStartEnd(size);
         List<DateTime> vacationDates = new List<DateTime>();
+        bool vacationCorrect = false;
+        int size = 0;
+        DateTime start = new DateTime();
+        DateTime end = new DateTime();
 
         while (!vacationCorrect)
         {
-            vacationDates = v.GetVacationDatesList(startAndEnd[0], startAndEnd[1]);
-            vacationCorrect = CheckIfVacationCorrect(vacationDates);
+            size = totalDays - currentDays > 7 ? v.GetVacationSize() : 7;
+
+            DateTime[] startAndEnd = v.GetVacationStartEnd(size);
+            start = startAndEnd[0];
+            end = startAndEnd[1];
+
+            vacationCorrect = CheckIfVacationCorrect(start, end);
         }
 
+        vacationDates = v.GetVacationDatesList(start, end);
         workerVacationDates = workerVacationDates.Concat(vacationDates).ToList();
+        allVacations = allVacations.Concat(vacationDates).ToList();
 
         currentDays += size;
 
-        bool CheckIfVacationCorrect(List<DateTime> list)
+        bool CheckIfVacationCorrect(DateTime start, DateTime end)
         {
             bool firstCheck = true;
             bool secondCheck = true;
-            foreach (DateTime vac in list)
+            if (allVacations.Count == 0 && workerVacationDates.Count == 0) return true;
+            else
             {
-                firstCheck = allVacations.Count == 0 || allVacations.All(x => x != vac.AddDays(-3));
-                secondCheck = workerVacationDates.Count == 0 || (workerVacationDates.Any(x => x.AddMonths(1) >= vac) && list.Any(x => x.AddMonths(-1) <= vac));
+                firstCheck = !allVacations.Any(x => x.AddDays(3) >= start && x.AddDays(3) <= end);
+                secondCheck = !(workerVacationDates.Any(x => x.AddMonths(1) >= end) && workerVacationDates.Any(x => x.AddMonths(-1) <= start));
             }
 
             return firstCheck && secondCheck;
         }
+
     }
 
-    allVacations = allVacations.Concat(workerVacationDates).ToList();
-}
+    PrintVacations(v.WorkerName, workerVacationDates);
 
-foreach (var item in allVacations)
-{
-    Console.WriteLine(item);
-}
+    void PrintVacations(string worker, List<DateTime> vacations)
+    {
+        Console.WriteLine($"Дни отпуска {worker}:");
+        foreach (DateTime vac in vacations)
+        {
+            Console.WriteLine(vac.ToShortDateString());
+        }
+        Console.WriteLine();
+    }
 
+}
 
 class Vacation
 {
